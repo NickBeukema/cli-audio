@@ -1,0 +1,2 @@
+class CliAudioException(Exception):
+  pass

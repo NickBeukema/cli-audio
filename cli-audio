@@ -4,9 +4,19 @@ from front.FrontEnd import FrontEnd
 from player.Player import Player
 from curses import wrapper
 
+import sys
+
 def main():
+
+    file = None
+
+    if len(sys.argv) < 2:
+        file = "."
+    else:
+        file = sys.argv[1]
+
     player = Player()
-    front_end = FrontEnd(player)
+    front_end = FrontEnd(player, file)
 
 if __name__ == "__main__":
     main()
